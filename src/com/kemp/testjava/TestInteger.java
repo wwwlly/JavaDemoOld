@@ -6,7 +6,7 @@ package com.kemp.testjava;
 public class TestInteger {
 
     public static void main(String[] args) {
-        test4();
+        test3();
     }
 
     private static void test1() {

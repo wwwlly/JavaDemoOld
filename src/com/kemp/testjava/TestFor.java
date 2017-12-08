@@ -26,4 +26,18 @@ public class TestFor {
         i++;
         System.out.println("change");
     }
+
+    /**
+     * 跳出多重循环
+     */
+    private static void test(){
+        A://标记
+        for (int i = 0; i < 5; i++){
+            for (int j = 0; j < 3; j ++){
+                if(i == 2 && j == 1){
+                    break A;
+                }
+            }
+        }
+    }
 }
