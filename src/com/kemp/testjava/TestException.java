@@ -9,16 +9,13 @@ public class TestException {
             try {
                 throw new Sneeze();
             } catch (Annoyance a) {
-                if(a instanceof Sneeze){
-                    System.out.println("a instanceof Sneeze");
-                }
+//                if(a instanceof Sneeze){
+//                    System.out.println("a instanceof Sneeze");
+//                }
                 System.out.println("Caught Annoyance");
                 throw a;
             }
         } catch (Sneeze s) {
-            if(s instanceof Sneeze){
-                System.out.println("a instanceof Sneeze");
-            }
             System.out.println("Caught Sneeze");
             return;
         } finally {
