@@ -4,7 +4,11 @@ package com.kemp.testjava;
  * Created by wangkp on 2017/12/7.
  */
 public class TestException {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
+        test1();
+    }
+
+    private static void test1(){
         try {
             try {
                 throw new Sneeze();
@@ -22,10 +26,29 @@ public class TestException {
             System.out.println("Hello World!");
         }
     }
+
+    private static void test2(){
+        int $aaa = 1;
+        Aa a = new SubAa();
+//        a.foo();±‡“Î ß∞‹
+    }
 }
 
 class Annoyance extends Exception {
 }
 
 class Sneeze extends Annoyance {
+}
+
+class Aa {
+
+    void foo() throws Exception{
+        throw new Exception();
+    }
+}
+
+class SubAa extends Aa{
+    void foo(){
+        System.out.println("A ");
+    }
 }
