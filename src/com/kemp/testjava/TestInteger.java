@@ -6,7 +6,7 @@ package com.kemp.testjava;
 public class TestInteger {
 
     public static void main(String[] args) {
-        test3();
+        test5();
     }
 
     private static void test1() {
@@ -77,5 +77,16 @@ public class TestInteger {
         }
 
         private IntegerCache() {}
+    }
+
+    private static void test5(){
+        int VISIBILITY_MASK = 0x0000000C;
+        System.out.println(Integer.toHexString(16));
+        System.out.println(Integer.toBinaryString(0x08000000));
+        System.out.println(Integer.toBinaryString(VISIBILITY_MASK));
+        int SOUND_EFFECTS_ENABLED = 0x08000000;
+        int HAPTIC_FEEDBACK_ENABLED = 0x10000000;
+        int mViewFlags = SOUND_EFFECTS_ENABLED | HAPTIC_FEEDBACK_ENABLED;
+        System.out.println(Integer.toBinaryString(mViewFlags));
     }
 }

@@ -9,7 +9,8 @@ public class TestMath {
 //        int fti = Float.floatToIntBits(11.5f);
 //        System.out.println(fti);
 //        System.out.println(Integer.toBinaryString(fti));
-        test1();
+//        test1();
+        testTrigonometric();
     }
 
     /**
@@ -30,5 +31,16 @@ public class TestMath {
         System.out.println("a:" + a + ",b:" + b);
         int c = b << 1;
         System.out.println("b:" + b + ",c:" + c);
+    }
+
+    private static void testTrigonometric() {
+        double s = Math.sin(Math.PI / 4);
+        System.out.println("sin:" + s);
+        double c = Math.cos(Math.PI / 2);
+        System.out.println("cos:" + c);
+        double d = Math.toRadians(180);
+        System.out.format("pi µÄÖµÎª %.4f%n", d);
+        double angle = 2 / 7 * Math.PI;
+        System.out.println("angle:" + angle);
     }
 }
