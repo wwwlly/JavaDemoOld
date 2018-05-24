@@ -1,12 +1,15 @@
 package com.kemp.testjava;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+
 /**
  * Created by wangkp on 2017/12/7.
  */
 public class TestClassLoader {
 
     public static void main(String[] args){
-        test3();
+        test4();
     }
 
     private static void test1(){
@@ -31,6 +34,47 @@ public class TestClassLoader {
         while (loader != null) {
             System.out.println(loader.toString());
             loader = loader.getParent();
+        }
+    }
+
+    private static void test4(){
+        SuperClass<Cat> superClass = new SubClass();
+        System.out.println(superClass.getBeanClass());
+    }
+
+    public abstract static class SuperClass<T> {
+
+        private Class<T> beanClass;
+        @SuppressWarnings("unchecked")
+        public SuperClass() {
+            super();
+            ParameterizedType parameterizedType =  (ParameterizedType) getClass().getGenericSuperclass();
+            Type[] types = parameterizedType.getActualTypeArguments();
+            beanClass = (Class<T>) types[0];
+        }
+
+        public Class<T> getBeanClass() {
+            return beanClass;
+        }
+
+        public void setBeanClass(Class<T> beanClass) {
+            this.beanClass = beanClass;
+        }
+
+    }
+
+    public static class SubClass extends SuperClass<Cat> {
+
+        public SubClass() {
+            super();
+        }
+
+    }
+
+    static class Cat {
+
+        public Cat() {
+            super();
         }
     }
 }
