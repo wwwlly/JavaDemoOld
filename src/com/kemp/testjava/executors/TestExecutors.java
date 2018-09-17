@@ -1,4 +1,4 @@
-package com.kemp.testjava;
+package com.kemp.testjava.executors;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

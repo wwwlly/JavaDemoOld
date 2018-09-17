@@ -1,4 +1,4 @@
-package com.kemp.testjava.test_class_init;
+package com.kemp.testjava.class_init;
 
 /**
  * 测试类的static、构造器、属性的加载顺序

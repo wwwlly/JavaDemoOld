@@ -1,4 +1,4 @@
-package com.kemp.testjava.test_class_init;
+package com.kemp.testjava.class_init;
 
 public class ClassA {
 
