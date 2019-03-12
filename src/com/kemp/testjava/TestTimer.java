@@ -9,17 +9,25 @@ public class TestTimer {
 
         Timer timer = new Timer();
         TimerTask timerTask = new TimerTask() {
+
+            int i = 0;
+
             @Override
             public void run() {
-                System.out.println("current: " + System.currentTimeMillis());
-                System.out.println(Thread.currentThread().getName());
+                if(i == 5){
+                    timer.cancel();
+                    return;
+                }
+                System.out.println("task current: " + System.currentTimeMillis());
+                System.out.println("task name: " + Thread.currentThread().getName());
                 System.out.println("do tasts.");
-                timer.cancel();
+                i ++;
             }
         };
-        timer.schedule(timerTask, 5 * 1000);
-        System.out.println("current: " + System.currentTimeMillis());
-        System.out.println(Thread.currentThread().getName());
+//        timer.schedule(timerTask, 5 * 1000);
+        timer.schedule(timerTask, 1000, 1000);
+        System.out.println("main current: " + System.currentTimeMillis());
+        System.out.println("main name: " + Thread.currentThread().getName());
     }
 
 
