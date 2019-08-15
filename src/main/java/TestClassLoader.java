@@ -7,11 +7,14 @@ import java.lang.reflect.Type;
 public class TestClassLoader {
 
     public static void main(String[] args){
-        test4();
+        test1();
+//        test4();
     }
 
     private static void test1(){
-        A a = new B();
+        Parent parent = new Son();
+        System.out.println("new Son()");
+        Son son = new Son();
 //        a.getClass().getClassLoader()
     }
 
@@ -77,22 +80,60 @@ public class TestClassLoader {
     }
 }
 
-class A{
+/**
+ * 静态代码块和构造代码块的异同点
+ * 相同点：都是JVM加载类后且在构造函数执行之前执行，在类中可定义多个，一般在代码块中对一些static变量进行赋值。
+ * 不同点：静态代码块在非静态代码块之前执行。静态代码块只在第一次new时执行一次，之后不在执行。而非静态代码块每new一次就执行一次。
+ */
+class Parent{
+
+    int a = init();
+
     static {
-        System.out.println("a static");
+        System.out.println("Parent static");
     }
 
-    A(){
-        System.out.println("a construction");
+    {
+        System.out.println("Parent 代码块1");
+    }
+
+    {
+        System.out.println("Parent 代码块2");
+    }
+
+    Parent(){
+        System.out.println("Parent construction");
+    }
+
+    int init(){
+        a = 1;
+        System.out.println("Parent a int");
+        return 2;
     }
 }
 
-class B extends A{
+class Son extends Parent{
+
+    int b = initb();
+
     static {
-        System.out.println("b static");
+        System.out.println("Son static");
     }
 
-    B(){
-        System.out.println("b construction");
+    {
+        System.out.println("Son 代码块1");
+    }
+
+    {
+        System.out.println("Son 代码块2");
+    }
+
+    Son(){
+        System.out.println("Son construction");
+    }
+
+    int initb(){
+        System.out.println("Son b int");
+        return 2;
     }
 }
