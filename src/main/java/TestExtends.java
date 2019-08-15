@@ -2,12 +2,12 @@ public class TestExtends {
 
     private static void test(){
         C e = new E();
-        if(e instanceof D){
-            System.out.println("instanceof");
+        if(e instanceof C){
+            System.out.println("e is instanceof C");
         }
         C f = new F();
         if(f instanceof D){
-            System.out.println("instanceof");
+            System.out.println("f is instanceof D");
         }
     }
 
