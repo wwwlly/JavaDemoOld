@@ -9,7 +9,8 @@ public class TestFor {
     private static int i = 0;
 
     public static void main(String[] args) {
-        test3();
+        test1();
+//        test3();
     }
 
     private static void initFor() {
@@ -44,7 +45,7 @@ public class TestFor {
     }
 
     /**
-     * 测试break、continue
+     * 测试break、continue、returen
      * continue:用于结束循环体中其后语句的执行，并跳回循环程序块的开头执行下一次循环，而不是立刻循环体。
      * break:作用是跳出当前循环块（for、while、do while）或程序块（switch）。
      * 在循环块中的作用是跳出当前正在循环的循环体。在程序块中的作用是中断和下一个case条件的比较。
@@ -52,9 +53,10 @@ public class TestFor {
     private static void test1() {
         for (int i = 0; i < 5; i++) {
             System.out.println("i:" + i);
-            if (i == 1) {
+            if (i == 3) {
 //                continue;
-                break;
+//                break;
+                return;
             }
             System.out.println("end");
         }
