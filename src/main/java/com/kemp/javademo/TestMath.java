@@ -1,3 +1,5 @@
+package com.kemp.javademo;
+
 /**
  * Created by wangkp on 2017/12/5.
  */
@@ -12,16 +14,16 @@ public class TestMath {
     }
 
     /**
-     * Math.round(a)ËÄÉáÎåÈë£¬±¾ÖÊ£ºa¼ÓÉÏ0.5È»ºóÏòÏÂÈ¡Õû
-     * floor()ÏòÏÂÈ¡Õû
-     * ceil()ÏòÉÏÈ¡Õû
+     * Math.round(a)å››èˆäº”å…¥ï¼Œæœ¬è´¨ï¼šaåŠ ä¸Š0.5ç„¶åå‘ä¸‹å–æ•´
+     * floor()å‘ä¸‹å–æ•´
+     * ceil()å‘ä¸Šå–æ•´
      */
     private static void testRound() {
 //        Math.round()
     }
 
     /**
-     * µ±Ò»¸ö»ù±¾ÀàĞÍ±äÁ¿±»Ç¿×ª¡¢±»ÒÆÎ»Ô­Öµ²»±ä
+     * å½“ä¸€ä¸ªåŸºæœ¬ç±»å‹å˜é‡è¢«å¼ºè½¬ã€è¢«ç§»ä½åŸå€¼ä¸å˜
      */
     private static void test1() {
         float a = 5.2f;
@@ -37,7 +39,7 @@ public class TestMath {
         double c = Math.cos(Math.PI / 2);
         System.out.println("cos:" + c);
         double d = Math.toRadians(180);
-        System.out.format("pi µÄÖµÎª %.4f%n", d);
+        System.out.format("pi çš„å€¼ä¸º %.4f%n", d);
         double angle = 2 / 7 * Math.PI;
         System.out.println("angle:" + angle);
     }

@@ -1,3 +1,5 @@
+package com.kemp.javademo;
+
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
@@ -7,13 +9,14 @@ import java.lang.reflect.Type;
 public class TestClassLoader {
 
     public static void main(String[] args){
-        test1();
+//        test1();
+        test2();
 //        test4();
     }
 
     private static void test1(){
         Parent parent = new Son();
-        System.out.println("new Son()");
+        System.out.println("new com.kemp.javademo.Son()");
         Son son = new Son();
 //        a.getClass().getClassLoader()
     }
@@ -21,14 +24,19 @@ public class TestClassLoader {
     private static void test2(){
         ClassLoader classLoader = ClassLoader.getSystemClassLoader();
         try {
-            Class timeClass = classLoader.loadClass("com.kemp.testjava.TestTime");
+            Class sonClass = classLoader.loadClass("com.kemp.javademo.Son");
+            Son son = (Son) sonClass.newInstance();
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * ÑİÊ¾Àà¼ÓÔØÆ÷µÄÊ÷×´×éÖ¯½á¹¹
+     * æ¼”ç¤ºç±»åŠ è½½å™¨çš„æ ‘çŠ¶ç»„ç»‡ç»“æ„
      */
     private static void test3(){
         ClassLoader loader = TestClassLoader.class.getClassLoader();
@@ -81,33 +89,33 @@ public class TestClassLoader {
 }
 
 /**
- * ¾²Ì¬´úÂë¿éºÍ¹¹Ôì´úÂë¿éµÄÒìÍ¬µã
- * ÏàÍ¬µã£º¶¼ÊÇJVM¼ÓÔØÀàºóÇÒÔÚ¹¹Ôìº¯ÊıÖ´ĞĞÖ®Ç°Ö´ĞĞ£¬ÔÚÀàÖĞ¿É¶¨Òå¶à¸ö£¬Ò»°ãÔÚ´úÂë¿éÖĞ¶ÔÒ»Ğ©static±äÁ¿½øĞĞ¸³Öµ¡£
- * ²»Í¬µã£º¾²Ì¬´úÂë¿éÔÚ·Ç¾²Ì¬´úÂë¿éÖ®Ç°Ö´ĞĞ¡£¾²Ì¬´úÂë¿éÖ»ÔÚµÚÒ»´ÎnewÊ±Ö´ĞĞÒ»´Î£¬Ö®ºó²»ÔÚÖ´ĞĞ¡£¶ø·Ç¾²Ì¬´úÂë¿éÃ¿newÒ»´Î¾ÍÖ´ĞĞÒ»´Î¡£
+ * é™æ€ä»£ç å—å’Œæ„é€ ä»£ç å—çš„å¼‚åŒç‚¹
+ * ç›¸åŒç‚¹ï¼šéƒ½æ˜¯JVMåŠ è½½ç±»åä¸”åœ¨æ„é€ å‡½æ•°æ‰§è¡Œä¹‹å‰æ‰§è¡Œï¼Œåœ¨ç±»ä¸­å¯å®šä¹‰å¤šä¸ªï¼Œä¸€èˆ¬åœ¨ä»£ç å—ä¸­å¯¹ä¸€äº›staticå˜é‡è¿›è¡Œèµ‹å€¼ã€‚
+ * ä¸åŒç‚¹ï¼šé™æ€ä»£ç å—åœ¨éé™æ€ä»£ç å—ä¹‹å‰æ‰§è¡Œã€‚é™æ€ä»£ç å—åªåœ¨ç¬¬ä¸€æ¬¡newæ—¶æ‰§è¡Œä¸€æ¬¡ï¼Œä¹‹åä¸åœ¨æ‰§è¡Œã€‚è€Œéé™æ€ä»£ç å—æ¯newä¸€æ¬¡å°±æ‰§è¡Œä¸€æ¬¡ã€‚
  */
 class Parent{
 
     int a = init();
 
     static {
-        System.out.println("Parent static");
+        System.out.println("com.kemp.javademo.Parent static");
     }
 
     {
-        System.out.println("Parent ´úÂë¿é1");
+        System.out.println("com.kemp.javademo.Parent ä»£ç å—1");
     }
 
     {
-        System.out.println("Parent ´úÂë¿é2");
+        System.out.println("com.kemp.javademo.Parent ä»£ç å—2");
     }
 
     Parent(){
-        System.out.println("Parent construction");
+        System.out.println("com.kemp.javademo.Parent construction");
     }
 
     int init(){
         a = 1;
-        System.out.println("Parent a int");
+        System.out.println("com.kemp.javademo.Parent a int");
         return 2;
     }
 }
@@ -117,23 +125,23 @@ class Son extends Parent{
     int b = initb();
 
     static {
-        System.out.println("Son static");
+        System.out.println("com.kemp.javademo.Son static");
     }
 
     {
-        System.out.println("Son ´úÂë¿é1");
+        System.out.println("com.kemp.javademo.Son ä»£ç å—1");
     }
 
     {
-        System.out.println("Son ´úÂë¿é2");
+        System.out.println("com.kemp.javademo.Son ä»£ç å—2");
     }
 
     Son(){
-        System.out.println("Son construction");
+        System.out.println("com.kemp.javademo.Son construction");
     }
 
     int initb(){
-        System.out.println("Son b int");
+        System.out.println("com.kemp.javademo.Son b int");
         return 2;
     }
 }

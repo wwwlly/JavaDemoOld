@@ -1,3 +1,5 @@
+package com.kemp.javademo;
+
 /**
  * Created by wangkp on 2017/12/7.
  */
@@ -11,14 +13,14 @@ public class TestException {
             try {
                 throw new Sneeze();
             } catch (Annoyance a) {
-//                if(a instanceof Sneeze){
-//                    System.out.println("a instanceof Sneeze");
+//                if(a instanceof com.kemp.javademo.Sneeze){
+//                    System.out.println("a instanceof com.kemp.javademo.Sneeze");
 //                }
-                System.out.println("Caught Annoyance");
+                System.out.println("Caught com.kemp.javademo.Annoyance");
                 throw a;
             }
         } catch (Sneeze s) {
-            System.out.println("Caught Sneeze");
+            System.out.println("Caught com.kemp.javademo.Sneeze");
             return;
         } finally {
             System.out.println("Hello World!");
@@ -28,7 +30,7 @@ public class TestException {
     private static void test2(){
         int $aaa = 1;
         Aa a = new SubAa();
-//        a.foo();±àÒëÊ§°Ü
+//        a.foo();ç¼–è¯‘å¤±è´¥
     }
 }
 

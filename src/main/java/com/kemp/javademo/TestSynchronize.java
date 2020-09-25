@@ -1,7 +1,9 @@
+package com.kemp.javademo;
+
 import java.io.*;
 
 /**
- * ²âÊÔ¶àÏß³Ì²Ù×÷Í¬Ò»¸öÎÄ¼ş
+ * æµ‹è¯•å¤šçº¿ç¨‹æ“ä½œåŒä¸€ä¸ªæ–‡ä»¶
  * 
  */
 public class TestSynchronize {

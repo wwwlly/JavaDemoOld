@@ -1,3 +1,5 @@
+package com.kemp.javademo;
+
 /**
  * Created by wangkp on 2017/12/1.
  */
@@ -9,22 +11,22 @@ public class TestInteger {
 
     private static void test1() {
         Integer a = new Integer(3);
-        Integer b = 3;                  // ½«3×Ô¶¯×°Ïä³ÉIntegerÀàĞÍ
+        Integer b = 3;                  // å°†3è‡ªåŠ¨è£…ç®±æˆIntegerç±»å‹
         int c = 3;
-        System.out.println(a == b);     // false Á½¸öÒıÓÃÃ»ÓĞÒıÓÃÍ¬Ò»¶ÔÏó
-        System.out.println(a == c);     // true a×Ô¶¯²ğÏä³ÉintÀàĞÍÔÙºÍc±È½Ï
+        System.out.println(a == b);     // false ä¸¤ä¸ªå¼•ç”¨æ²¡æœ‰å¼•ç”¨åŒä¸€å¯¹è±¡
+        System.out.println(a == c);     // true aè‡ªåŠ¨æ‹†ç®±æˆintç±»å‹å†å’Œcæ¯”è¾ƒ
     }
 
     private static void test2() {
         Integer f1 = 100, f2 = 100, f3 = 150, f4 = 150;
 
-        System.out.println(f1 == f2);//Ò»Ö±Îªtrue
-        System.out.println(f3 == f4);//Ò»Ö±Îªfalse
-        // ×¢ÒâµÄÊÇf1¡¢f2¡¢f3¡¢f4ËÄ¸ö±äÁ¿¶¼ÊÇInteger¶ÔÏóÒıÓÃ£¬
-        // ËùÒÔÏÂÃæµÄ==ÔËËã±È½ÏµÄ²»ÊÇÖµ¶øÊÇÒıÓÃ¡£
-        // ×°ÏäµÄ±¾ÖÊÊÇÊ²Ã´ÄØ£¿µ±ÎÒÃÇ¸øÒ»¸öInteger¶ÔÏó¸³Ò»¸öintÖµµÄÊ±ºò£¬»áµ÷ÓÃIntegerÀàµÄ¾²Ì¬·½·¨valueOf·½·¨¡£
-        // Èç¹ûÕûĞÍ×ÖÃæÁ¿µÄÖµÔÚ-128µ½127Ö®¼ä£¬ÄÇÃ´²»»ánewĞÂµÄInteger¶ÔÏó£¬¶øÊÇÖ±½ÓÒıÓÃ³£Á¿³ØÖĞµÄInteger¶ÔÏó£¬
-        // ËùÒÔÉÏÃæµÄÃæÊÔÌâÖĞf1==f2µÄ½á¹ûÊÇtrue£¬¶øf3==f4µÄ½á¹ûÊÇfalse¡£
+        System.out.println(f1 == f2);//ä¸€ç›´ä¸ºtrue
+        System.out.println(f3 == f4);//ä¸€ç›´ä¸ºfalse
+        // æ³¨æ„çš„æ˜¯f1ã€f2ã€f3ã€f4å››ä¸ªå˜é‡éƒ½æ˜¯Integerå¯¹è±¡å¼•ç”¨ï¼Œ
+        // æ‰€ä»¥ä¸‹é¢çš„==è¿ç®—æ¯”è¾ƒçš„ä¸æ˜¯å€¼è€Œæ˜¯å¼•ç”¨ã€‚
+        // è£…ç®±çš„æœ¬è´¨æ˜¯ä»€ä¹ˆå‘¢ï¼Ÿå½“æˆ‘ä»¬ç»™ä¸€ä¸ªIntegerå¯¹è±¡èµ‹ä¸€ä¸ªintå€¼çš„æ—¶å€™ï¼Œä¼šè°ƒç”¨Integerç±»çš„é™æ€æ–¹æ³•valueOfæ–¹æ³•ã€‚
+        // å¦‚æœæ•´å‹å­—é¢é‡çš„å€¼åœ¨-128åˆ°127ä¹‹é—´ï¼Œé‚£ä¹ˆä¸ä¼šnewæ–°çš„Integerå¯¹è±¡ï¼Œè€Œæ˜¯ç›´æ¥å¼•ç”¨å¸¸é‡æ± ä¸­çš„Integerå¯¹è±¡ï¼Œ
+        // æ‰€ä»¥ä¸Šé¢çš„é¢è¯•é¢˜ä¸­f1==f2çš„ç»“æœæ˜¯trueï¼Œè€Œf3==f4çš„ç»“æœæ˜¯falseã€‚
     }
 
     //Integer.MAX_VALUE + 1 = Integer.MIN_VALUE

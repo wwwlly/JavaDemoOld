@@ -1,3 +1,5 @@
+package com.kemp.javademo;
+
 public class TestPrimitiveType {
     public static void main(String[] args) {
         // byte

@@ -1,3 +1,5 @@
+package com.kemp.javademo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,8 +13,8 @@ public class TestList {
     }
 
     /**
-     * foreach »á±¨ConcurrentModificationException´í
-     * forÈ´²»»á±¨´í
+     * foreach ä¼šæŠ¥ConcurrentModificationExceptioné”™
+     * forå´ä¸ä¼šæŠ¥é”™
      */
     private static void test(){
         List<String> list = new ArrayList<>();

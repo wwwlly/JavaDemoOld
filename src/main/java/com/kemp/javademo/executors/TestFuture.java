@@ -1,4 +1,4 @@
-package executors;
+package com.kemp.javademo.executors;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -9,7 +9,7 @@ public class TestFuture {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
         /**
-         * µÚÒ»ÖÖ·½Ê½:Future + ExecutorService
+         * ç¬¬ä¸€ç§æ–¹å¼:Future + ExecutorService
          * Task task = new Task();
          * ExecutorService service = Executors.newCachedThreadPool();
          * Future<Integer> future = service.submit(task1);
@@ -18,7 +18,7 @@ public class TestFuture {
 
 
         /**
-         * µÚ¶şÖÖ·½Ê½: FutureTask + ExecutorService
+         * ç¬¬äºŒç§æ–¹å¼: FutureTask + ExecutorService
          * ExecutorService executor = Executors.newCachedThreadPool();
          * Task task = new Task();
          * FutureTask<Integer> futureTask = new FutureTask<Integer>(task);
@@ -27,12 +27,12 @@ public class TestFuture {
          */
 
         /**
-         * µÚÈıÖÖ·½Ê½:FutureTask + Thread
+         * ç¬¬ä¸‰ç§æ–¹å¼:FutureTask + Thread
          */
 
-        // 2. ĞÂ½¨FutureTask,ĞèÒªÒ»¸öÊµÏÖÁËCallable½Ó¿ÚµÄÀàµÄÊµÀı×÷Îª¹¹Ôìº¯Êı²ÎÊı
+        // 2. æ–°å»ºFutureTask,éœ€è¦ä¸€ä¸ªå®ç°äº†Callableæ¥å£çš„ç±»çš„å®ä¾‹ä½œä¸ºæ„é€ å‡½æ•°å‚æ•°
         FutureTask<Integer> futureTask = new FutureTask<Integer>(new Task());
-        // 3. ĞÂ½¨Thread¶ÔÏó²¢Æô¶¯
+        // 3. æ–°å»ºThreadå¯¹è±¡å¹¶å¯åŠ¨
         Thread thread = new Thread(futureTask);
         thread.setName("Task thread");
         thread.start();
@@ -45,7 +45,7 @@ public class TestFuture {
 
         System.out.println("Thread [" + Thread.currentThread().getName() + "] is running");
 
-        // 4. µ÷ÓÃisDone()ÅĞ¶ÏÈÎÎñÊÇ·ñ½áÊø
+        // 4. è°ƒç”¨isDone()åˆ¤æ–­ä»»åŠ¡æ˜¯å¦ç»“æŸ
         if (!futureTask.isDone()) {
             System.out.println("Task is not done");
             try {
@@ -56,7 +56,7 @@ public class TestFuture {
         }
         int result = 0;
         try {
-            // 5. µ÷ÓÃget()·½·¨»ñÈ¡ÈÎÎñ½á¹û,Èç¹ûÈÎÎñÃ»ÓĞÖ´ĞĞÍê³ÉÔò×èÈûµÈ´ı
+            // 5. è°ƒç”¨get()æ–¹æ³•è·å–ä»»åŠ¡ç»“æœ,å¦‚æœä»»åŠ¡æ²¡æœ‰æ‰§è¡Œå®Œæˆåˆ™é˜»å¡ç­‰å¾…
             result = futureTask.get();
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,7 +66,7 @@ public class TestFuture {
 
     }
 
-    // 1. ¼Ì³ĞCallable½Ó¿Ú,ÊµÏÖcall()·½·¨,·ºĞÍ²ÎÊıÎªÒª·µ»ØµÄÀàĞÍ
+    // 1. ç»§æ‰¿Callableæ¥å£,å®ç°call()æ–¹æ³•,æ³›å‹å‚æ•°ä¸ºè¦è¿”å›çš„ç±»å‹
     static class Task implements Callable<Integer> {
 
         @Override

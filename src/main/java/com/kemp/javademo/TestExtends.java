@@ -1,13 +1,15 @@
+package com.kemp.javademo;
+
 public class TestExtends {
 
     private static void test(){
         C e = new E();
         if(e instanceof C){
-            System.out.println("e is instanceof C");
+            System.out.println("e is instanceof com.kemp.javademo.C");
         }
         C f = new F();
         if(f instanceof D){
-            System.out.println("f is instanceof D");
+            System.out.println("f is instanceof com.kemp.javademo.D");
         }
     }
 

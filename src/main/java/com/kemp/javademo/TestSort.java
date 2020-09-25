@@ -1,17 +1,19 @@
+package com.kemp.javademo;
+
 /**
- * �����㷨
+ * 排序算法
  */
 public class TestSort {
 
     /**
-     * ð������
+     * 冒泡排序
      * <p>
-     * ���ظ����߷ù�Ҫ�����Ԫ���У�һ�αȽ��������ڵ�Ԫ�أ�������ǵ�˳����Ӵ�С������ĸ��A��Z������Ͱ����ǽ���������
-     * �߷�Ԫ�صĹ������ظ��ؽ���ֱ��û������Ԫ����Ҫ������Ҳ����˵��Ԫ���Ѿ�������ɡ�
+     * 它重复地走访过要排序的元素列，一次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。
+     * 走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。
      */
     private static void bubbleSort(int[] arrs) {
         boolean flag = false;
-        //Ϊʲô��arrs.length - 1�ˣ�����5�������մ��㷨�����4�����Ϳ�����
+        //为什么是arrs.length - 1趟？比如5个数按照此算法排序好4个数就可以了
         for (int i = 0; i < arrs.length - 1; i++) {
             flag = false;
             for (int j = arrs.length - 1; j > i; j--) {
@@ -30,11 +32,11 @@ public class TestSort {
     }
 
     /**
-     * ѡ������
+     * 选择排序
      * <p>
-     * ѡ������Selection sort����һ�ּ�ֱ�۵������㷨�����Ĺ���ԭ����ÿһ�δӴ����������Ԫ����ѡ����С������󣩵�һ��Ԫ�أ�
-     * ��������е���ʼλ�ã�ֱ��ȫ�������������Ԫ�����ꡣ ѡ�������ǲ��ȶ������򷽷�����������[5�� 5�� 3]��һ�ξͽ���һ��[5]��[3]������
-     * ���µ�һ��5Ų�����ڶ���5���棩��
+     * 选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，
+     * 存放在序列的起始位置，直到全部待排序的数据元素排完。 选择排序是不稳定的排序方法（比如序列[5， 5， 3]第一次就将第一个[5]与[3]交换，
+     * 导致第一个5挪动到第二个5后面）。
      */
     private static void selectionSort(int[] arrs) {
         int size = arrs.length;
@@ -52,10 +54,10 @@ public class TestSort {
     }
 
     /**
-     * ��������
+     * 插入排序
      * <p>
-     * ��������Ļ����������ǽ�һ�����ݲ��뵽�Ѿ��ź�������������У��Ӷ��õ�һ���µġ�������һ���������ݣ��㷨�������������ݵ�����
-     * ʱ�临�Ӷ�ΪO(n^2)�����ȶ������򷽷���
+     * 插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序，
+     * 时间复杂度为O(n^2)。是稳定的排序方法。
      *
      * @param arrs
      */
@@ -78,10 +80,10 @@ public class TestSort {
     }
 
     /**
-     * ��������
-     * ��������Quicksort���Ƕ�ð�������һ�ָĽ���
-     * ���Ļ���˼���ǣ�ͨ��һ������Ҫ��������ݷָ�ɶ����������֣�����һ���ֵ��������ݶ�������һ���ֵ��������ݶ�ҪС��
-     * Ȼ���ٰ��˷����������������ݷֱ���п�����������������̿��Եݹ���У��Դ˴ﵽ�������ݱ���������С�
+     * 快速排序
+     * 快速排序（Quicksort）是对冒泡排序的一种改进。
+     * 它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，
+     * 然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
      *
      * @param arrs
      */
@@ -92,14 +94,14 @@ public class TestSort {
         int key = arrs[low];
         while (l < h) {
 
-            while (l < h && arrs[h] >= key)//���������ҵ�һ��С��key��ֵ
+            while (l < h && arrs[h] >= key)//从右向左找第一个小于key的值
                 h--;
             if (l < h) {
                 arrs[l] = arrs[h];
                 l++;
             }
 
-            while (l < h && arrs[l] < key)//���������ҵ�һ������key��ֵ
+            while (l < h && arrs[l] < key)//从左向右找第一个大于key的值
                 l++;
             if (l < h) {
                 arrs[h] = arrs[l];

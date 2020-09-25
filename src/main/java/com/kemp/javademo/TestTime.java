@@ -1,3 +1,5 @@
+package com.kemp.javademo;
+
 import java.time.LocalDateTime;
 import java.util.Calendar;
 
@@ -10,7 +12,7 @@ public class TestTime {
     }
 
     /**
-     * »ñÈ¡ÄêÔÂÈÕ
+     * è·å–å¹´æœˆæ—¥
      */
     private static void test() {
         Calendar cal = Calendar.getInstance();
@@ -32,7 +34,7 @@ public class TestTime {
     }
 
     /**
-     * ×òÌìµÄµ±Ç°Ê±¿Ì
+     * æ˜¨å¤©çš„å½“å‰æ—¶åˆ»
      */
     private static void testYestoday(){
         Calendar cal = Calendar.getInstance();

@@ -1,7 +1,7 @@
-package class_init;
+package com.kemp.javademo.class_init;
 
 /**
- * 测试类的static、构造器、属性的加载顺序
+ * 娴嬭瘯绫荤殑static銆佹瀯閫犲櫒銆佸睘鎬х殑鍔犺浇椤哄簭
  */
 public class TestClassInit {
 
