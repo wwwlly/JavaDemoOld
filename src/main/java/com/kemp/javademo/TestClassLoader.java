@@ -4,16 +4,22 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 /**
+ *
  * Created by wangkp on 2017/12/7.
  */
 public class TestClassLoader {
 
     public static void main(String[] args){
-//        test1();
-        test2();
+        test1();
+//        test2();
 //        test4();
     }
 
+    /**
+     * java的执行顺序：
+     * 1.先执行static代码（无论是static变量还是static代码块，同时存在则顺序执行）且先执行父类的然后执行子类的，在执行以下的；
+     * 2.然后执行属性初始化和普通代码块（同时存在顺序执行）然后执行构造方法，同样先执行父类的然后执行子类的；
+     */
     private static void test1(){
         Parent parent = new Son();
         System.out.println("new com.kemp.javademo.Son()");
@@ -122,6 +128,8 @@ class Parent{
 
 class Son extends Parent{
 
+    static int a = inita();
+
     int b = initb();
 
     static {
@@ -138,6 +146,11 @@ class Son extends Parent{
 
     Son(){
         System.out.println("com.kemp.javademo.Son construction");
+    }
+
+    static int inita(){
+        System.out.println("com.kemp.javademo.Son a int");
+        return 1;
     }
 
     int initb(){
