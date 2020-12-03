@@ -1,33 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f056a410-4e8e-4568-8014-30d4e8ee9738" name="Default Changelist" comment="test for">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestAnonymous.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="f056a410-4e8e-4568-8014-30d4e8ee9738" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/proxy/Call.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/proxy/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/proxy/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/proxy/Service1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/proxy/TextProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestAnonymous.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestClassLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestCollections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestCollections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestExtends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestFor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestMath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestObservable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestPrimitiveType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestPrimitiveType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestRxJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestRxJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestSynchronize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestSynchronize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestTimer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/class_init/ClassA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/class_init/ClassA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/class_init/TestClassInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/class_init/TestClassInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/executors/TestExecutors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/executors/TestExecutors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/executors/TestFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/executors/TestFuture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kemp/javademo/TestClassLoader.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,9 +38,9 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="G:/GitRepertory_YCPartner/YCPartner_Android" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
@@ -80,37 +61,24 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.TestClassLoader">
+    <configuration name="TestClassInit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kemp.javademo.class_init.TestClassInit" />
+      <module name="JavaDemo.main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kemp.javademo.class_init.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestClassLoader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kemp.javademo.TestClassLoader" />
       <module name="JavaDemo.main" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestExecutors" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kemp.javademo.executors.TestExecutors" />
-      <module name="JavaDemo.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kemp.javademo.executors.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestFor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kemp.javademo.TestFor" />
-      <module name="JavaDemo.main" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kemp.javademo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,6 +111,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TextProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kemp.javademo.proxy.TextProxy" />
+      <module name="JavaDemo.main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kemp.javademo.proxy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -167,20 +149,23 @@
     </configuration>
     <list>
       <item itemvalue="Application.TestClassLoader" />
-      <item itemvalue="Application.TestFor" />
-      <item itemvalue="Application.TestExecutors" />
       <item itemvalue="Application.TestTimer" />
       <item itemvalue="Application.TestTime" />
+      <item itemvalue="Application.TextProxy" />
+      <item itemvalue="Application.TestClassInit" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestClassInit" />
+        <item itemvalue="Application.TextProxy" />
         <item itemvalue="Application.TestTime" />
         <item itemvalue="Application.TestTimer" />
         <item itemvalue="Application.TestClassLoader" />
-        <item itemvalue="Application.TestExecutors" />
-        <item itemvalue="Application.TestFor" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -221,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579486224150</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="UTF-8">
+      <created>1601013441734</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601013441734</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +234,7 @@
     <MESSAGE value="类代码块的加载顺序" />
     <MESSAGE value="test instanceof" />
     <MESSAGE value="test for" />
-    <option name="LAST_COMMIT_MESSAGE" value="test for" />
+    <MESSAGE value="UTF-8" />
+    <option name="LAST_COMMIT_MESSAGE" value="UTF-8" />
   </component>
 </project>
