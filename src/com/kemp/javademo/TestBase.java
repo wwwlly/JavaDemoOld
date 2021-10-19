@@ -2,6 +2,9 @@ package com.kemp.javademo;
 
 /**
  * 基础
+ * 方法重载
+ * i++
+ * 基本类型
  */
 public class TestBase {
 
