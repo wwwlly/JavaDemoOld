@@ -12,6 +12,7 @@ public class TestBase {
         testM();
         testI();
         testEncode();
+        testFloat();
     }
 
     /**
@@ -55,7 +56,7 @@ public class TestBase {
      * double：64位，数据范围在4.9e-324~1.8e308，赋值时可以加d或D也可以不加。
      * boolean：只有true和false两个取值。
      * char：16位，存储Unicode码，用单引号赋值。
-     *
+     * <p>
      * 原码：第一位表示符号，正数用0表示，负数用1表示
      * 反码：正数的反码是其本身，负数的反码是在其原码的基础上, 符号位不变，其余各个位取反
      * 补码：正数的补码就是其本身，负数的补码是在其原码的基础上, 符号位不变, 其余各位取反, 最后+1. (即在反码的基础上+1)
@@ -70,5 +71,13 @@ public class TestBase {
         System.out.println(Integer.toBinaryString(num));
         byte b = (byte) num;
         System.out.println("b: " + b);
+    }
+
+    /**
+     * 0.1对于十进制来说是能除尽的，但对于二进制来说是除不尽的
+     */
+    private static void testFloat() {
+        System.out.println("TestBase.testFloat");
+        System.out.println(0.1 * 3 == 0.3);
     }
 }
