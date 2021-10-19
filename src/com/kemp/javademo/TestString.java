@@ -9,6 +9,7 @@ public class TestString {
     public static void main(String[] args) {
         test();
         testEquals();
+        test1();
     }
 
     /**
@@ -31,6 +32,7 @@ public class TestString {
         String s7 = "Program";
         String s8 = "ming";
         String s9 = s7 + s8;
+        StringBuffer s10 = new StringBuffer(s1);
 
         System.out.println("==:");
         System.out.println(s1 == s2);
@@ -45,11 +47,23 @@ public class TestString {
         System.out.println(s1.equals(s2));
         System.out.println(s1.equals(s3));
         System.out.println(s1.equals(s1.intern()));
+        System.out.println(s1.equals(s10));
     }
 
     private static void test() {
         String s = "abc";
         s = "bcd";
         System.out.println("s: " + s);
+    }
+
+    /**
+     * 注意运算符优先级
+     * +的优先级大于==
+     */
+    private static void test1() {
+        System.out.println("TestString.test1");
+        String s1 = "abc";
+        String s2 = "abc";
+        System.out.println("=====>" + s1 == s2);
     }
 }
